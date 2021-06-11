@@ -1,8 +1,10 @@
-import 'package:app_landing_page/utils/responsive.dart';
-import 'package:get/get.dart';
-import 'package:flutter/material.dart';
 import 'package:app_landing_page/sections/top_section/top_section.dart';
+import 'package:app_landing_page/sections/trusted_companies/trusted_companies_section.dart';
+import 'package:app_landing_page/utils/responsive.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import 'constants.dart';
 import 'controllers/MenuController.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -31,6 +33,8 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               TopSection(),
+              SizedBox(height: kDefaultPadding * 2),
+              TrustedCompaniesSection(),
             ],
           ),
         ),

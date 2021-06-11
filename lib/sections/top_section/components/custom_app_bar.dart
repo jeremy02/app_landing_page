@@ -13,6 +13,8 @@ class CustomAppBar extends StatelessWidget {
         Responsive.isMobile(context) ? 0 : 20,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           if (!Responsive.isDesktop(context))
             IconButton(

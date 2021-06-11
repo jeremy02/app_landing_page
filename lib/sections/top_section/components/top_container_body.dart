@@ -19,7 +19,7 @@ class TopContainerBody extends StatelessWidget {
 
   // build for mobile
   Widget topContainerMobileLayout(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
         topContainerImageLayout(context),
         topContainerTextLayout(context),
@@ -51,7 +51,7 @@ class TopContainerBody extends StatelessWidget {
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
             return Opacity(
-              opacity: Responsive.isMobile(context) ? 0.10 : 1.0,
+              opacity: Responsive.isMobile(context) ? 1.0 : 1.0,
               child: Container(
                 height: Responsive.isMobile(context)
                     ? constraints.maxHeight - 50
