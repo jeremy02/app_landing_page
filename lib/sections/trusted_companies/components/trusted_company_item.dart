@@ -1,8 +1,7 @@
+import 'package:app_landing_page/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
-
-class TrustedCompanyItem extends StatefulWidget {
+class TrustedCompanyItem extends StatelessWidget {
   const TrustedCompanyItem({
     Key key,
     @required this.title,
@@ -13,30 +12,38 @@ class TrustedCompanyItem extends StatefulWidget {
   final String title;
   final String imagePath;
   final VoidCallback press;
-  @override
-  _TrustedCompanyItemState createState() => _TrustedCompanyItemState();
-}
 
-class _TrustedCompanyItemState extends State<TrustedCompanyItem> {
   @override
   Widget build(BuildContext context) {
-    bool _isHover = false;
+    Duration duration = Duration(milliseconds: 200);
 
-    return InkWell(
-      onTap: widget.press,
-      onHover: (value) {
-        setState(() {
-          _isHover = value;
-        });
-      },
-      child: AnimatedContainer(
-        duration: kDefaultDuration,
-        width: 100,
-        height: 100,
-        margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
-        decoration: BoxDecoration(color: Colors.black38),
-      ),
+    return Row(
+      children: [
+        InkWell(
+          borderRadius: BorderRadius.circular(10),
+          onTap: press,
+          child: Padding(
+            padding: EdgeInsets.all(kDefaultPadding),
+            child: AnimatedContainer(
+              duration: duration,
+              width: kDefaultPadding * 5,
+              height: kDefaultPadding * 3,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    imagePath,
+                  ),
+                  fit: BoxFit.contain,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: kDefaultPadding,
+        ),
+      ],
     );
   }
 }

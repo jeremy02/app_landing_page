@@ -18,3 +18,9 @@ const kBgDarkColor = Color(0xFFEBEDFA);
 const kBadgeColor = Color(0xFFEE376E);
 const kGrayColor = Color(0xFF8793B2);
 const kTitleTextColor = Color(0xFF30384D);
+
+final kDefaultCardShadow = BoxShadow(
+  offset: Offset(0, 20),
+  blurRadius: 50,
+  color: Colors.black.withOpacity(0.1),
+);

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../constants.dart';
-import 'models/trusted_companies.dart';
+import 'models/trusted_company.dart';
 
 class TrustedCompaniesSection extends StatelessWidget {
   @override
@@ -19,7 +19,6 @@ class TrustedCompaniesSection extends StatelessWidget {
           vertical: kDefaultPadding * 2,
         ),
         width: double.infinity,
-        height: screenSize.height / 4,
         constraints: BoxConstraints(
           maxWidth: 1110,
         ),
@@ -40,19 +39,26 @@ class TrustedCompaniesSection extends StatelessWidget {
                 ),
               ),
             ),
-            Row(
-              children: List.generate(
-                _controller.trustedCompanies.length,
-                (index) => TrustedCompanyItem(
-                  title: _controller.trustedCompanies[index].title,
-                  imagePath: _controller.trustedCompanies[index].imagePath,
-                  press: () => (index) {
-                    //
-                    // print(index);
-                  },
-                ),
-              ),
-            ),
+            SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: LayoutBuilder(builder:
+                    (BuildContext context, BoxConstraints constraints) {
+                  return Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: List.generate(
+                      _controller.trustedCompanies.length,
+                      (index) => TrustedCompanyItem(
+                        title: _controller.trustedCompanies[index].title,
+                        imagePath:
+                            _controller.trustedCompanies[index].imagePath,
+                        press: () => (index) {
+                          //
+                          // print(index);
+                        },
+                      ),
+                    ),
+                  );
+                })),
           ],
         ),
       ),
