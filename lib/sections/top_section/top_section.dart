@@ -14,7 +14,9 @@ class TopSection extends StatelessWidget {
       alignment: Alignment.center,
       height: topSectionSize.height,
       width: double.infinity,
-      decoration: BoxDecoration(color: Colors.transparent),
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
       child: Container(
         padding: EdgeInsets.all(kDefaultPadding),
         child: Stack(

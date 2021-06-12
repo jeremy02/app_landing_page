@@ -17,6 +17,7 @@ class TrustedCompaniesSection extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(
           vertical: kDefaultPadding * 2,
+          horizontal: kDefaultPadding,
         ),
         width: double.infinity,
         constraints: BoxConstraints(
