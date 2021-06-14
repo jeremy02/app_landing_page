@@ -31,44 +31,44 @@ class TopContainerBody extends StatelessWidget {
   Widget topContainerParentLayout(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        Container(
           child: Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.all(kDefaultPadding),
             child: topContainerTextLayout(context),
           ),
         ),
-        topContainerImageLayout(context),
+        Flexible(
+          child: topContainerImageLayout(context),
+        ),
       ],
     );
   }
 
   // this displays the top containers image
   Widget topContainerImageLayout(BuildContext context) {
-    return Flexible(
-      child: Align(
-        alignment: Alignment.bottomRight,
-        child: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            return Opacity(
-              opacity: Responsive.isMobile(context) ? 0.1 : 1.0,
-              child: Container(
-                height: Responsive.isMobile(context)
-                    ? constraints.maxHeight - 50
-                    : constraints.maxHeight,
-                width: Responsive.isMobile(context)
-                    ? constraints.maxWidth - 100
-                    : constraints.maxWidth,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fitHeight,
-                    image: AssetImage("assets/images/top_image_1.png"),
-                  ),
+    return Align(
+      alignment: Alignment.bottomRight,
+      child: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          return Opacity(
+            opacity: Responsive.isMobile(context) ? 0.1 : 1.0,
+            child: Container(
+              height: Responsive.isMobile(context)
+                  ? constraints.maxHeight - 50
+                  : constraints.maxHeight,
+              width: Responsive.isMobile(context)
+                  ? constraints.maxWidth - 100
+                  : constraints.maxWidth,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.fitHeight,
+                  image: AssetImage("assets/images/top_image_1.png"),
                 ),
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }
