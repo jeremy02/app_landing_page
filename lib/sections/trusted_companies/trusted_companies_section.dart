@@ -41,9 +41,9 @@ class TrustedCompaniesSection extends StatelessWidget {
               ),
             ),
             SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: LayoutBuilder(builder:
-                    (BuildContext context, BoxConstraints constraints) {
+              scrollDirection: Axis.horizontal,
+              child: LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraints) {
                   return Row(
                     mainAxisSize: MainAxisSize.max,
                     children: List.generate(
@@ -59,7 +59,9 @@ class TrustedCompaniesSection extends StatelessWidget {
                       ),
                     ),
                   );
-                })),
+                },
+              ),
+            ),
           ],
         ),
       ),

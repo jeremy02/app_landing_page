@@ -1,5 +1,6 @@
 import 'package:app_landing_page/constants.dart';
 import 'package:app_landing_page/sections/featured_apps_section/models/app_feature.dart';
+import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 class AppFeaturesItem extends StatelessWidget {
@@ -16,7 +17,7 @@ class AppFeaturesItem extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.only(
-        bottom: kDefaultPadding,
+        bottom: kDefaultPadding * 1.5,
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -43,10 +44,11 @@ class AppFeaturesItem extends StatelessWidget {
             flex: 3,
             child: featureDescription(context),
           ),
-          Flexible(
-            flex: 2,
-            child: Container(),
-          ),
+          if (!Responsive.isMobile(context))
+            Flexible(
+              flex: 2,
+              child: Container(),
+            ),
         ],
       ),
     );

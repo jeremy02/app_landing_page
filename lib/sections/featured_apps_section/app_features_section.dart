@@ -45,11 +45,15 @@ class AppFeaturesSection extends StatelessWidget {
   // build for tablet and web
   Widget featuredAppsParentLayout(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.max,
       children: [
         Expanded(
+          flex: 6,
           child: AppFeaturesImageContainer(),
         ),
         Expanded(
+          flex: 7,
           child: AppFeaturesContentContainer(),
         ),
       ],

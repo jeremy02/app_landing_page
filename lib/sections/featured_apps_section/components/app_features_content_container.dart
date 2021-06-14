@@ -1,5 +1,6 @@
 import 'package:app_landing_page/constants.dart';
 import 'package:app_landing_page/sections/featured_apps_section/models/app_feature.dart';
+import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,10 @@ class AppFeaturesContentContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
+          if (!Responsive.isMobile(context))
+            SizedBox(
+              height: kDefaultPadding / 2,
+            ),
           Text(
             "Awesome Apps \nfeatures",
             textAlign: TextAlign.start,
