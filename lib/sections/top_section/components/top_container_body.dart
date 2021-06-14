@@ -106,7 +106,7 @@ class TopContainerBody extends StatelessWidget {
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 129, 131, 135),
                     fontWeight: FontWeight.w500,
                     height: 1.2,
                   ),

@@ -1,3 +1,4 @@
+import 'package:app_landing_page/sections/featured_apps_section/app_features_section.dart';
 import 'package:app_landing_page/sections/top_section/top_section.dart';
 import 'package:app_landing_page/sections/trusted_companies/trusted_companies_section.dart';
 import 'package:app_landing_page/utils/responsive.dart';
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
               TopSection(),
               // SizedBox(height: kDefaultPadding * 2),
               TrustedCompaniesSection(),
+              AppFeaturesSection(),
             ],
           ),
         ),
@@ -29,6 +31,7 @@ class HomeScreen extends StatelessWidget {
               TopSection(),
               // SizedBox(height: kDefaultPadding * 2),
               TrustedCompaniesSection(),
+              AppFeaturesSection(),
             ],
           ),
         ),
@@ -38,6 +41,7 @@ class HomeScreen extends StatelessWidget {
               TopSection(),
               // SizedBox(height: kDefaultPadding * 2),
               TrustedCompaniesSection(),
+              AppFeaturesSection(),
             ],
           ),
         ),
