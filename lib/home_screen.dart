@@ -1,3 +1,4 @@
+import 'package:app_landing_page/constants.dart';
 import 'package:app_landing_page/sections/app_features_section/app_features_section.dart';
 import 'package:app_landing_page/sections/app_rewards/app_rewards_section.dart';
 import 'package:app_landing_page/sections/top_section/top_section.dart';
@@ -20,10 +21,22 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               TopSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
               // SizedBox(height: kDefaultPadding * 2),
               TrustedCompaniesSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
               AppFeaturesSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
               AppRewardsSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
             ],
           ),
         ),
@@ -31,10 +44,22 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               TopSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
               // SizedBox(height: kDefaultPadding * 2),
               TrustedCompaniesSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
               AppFeaturesSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
               AppRewardsSection(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
             ],
           ),
         ),
@@ -42,9 +67,18 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               TopSection(),
+              SizedBox(
+                height: kDefaultPadding * 2,
+              ),
               // SizedBox(height: kDefaultPadding * 2),
               TrustedCompaniesSection(),
+              SizedBox(
+                height: kDefaultPadding * 2,
+              ),
               AppFeaturesSection(),
+              SizedBox(
+                height: kDefaultPadding * 2,
+              ),
               AppRewardsSection(),
             ],
           ),

@@ -16,9 +16,11 @@ class AppRewardsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     Duration duration = Duration(milliseconds: 200);
 
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: Responsive.isDesktop(context)
+          ? CrossAxisAlignment.start
+          : CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: [
         SizedBox(
@@ -45,7 +47,11 @@ class AppRewardsItem extends StatelessWidget {
         SizedBox(
           height: kDefaultPadding,
         ),
-        featureDescription(context),
+        if (!Responsive.isDesktop(context))
+          Center(
+            child: featureDescription(context),
+          ),
+        if (Responsive.isDesktop(context)) featureDescription(context),
         SizedBox(
           height: kDefaultPadding,
         ),
@@ -64,7 +70,9 @@ class AppRewardsItem extends StatelessWidget {
     }
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: Responsive.isDesktop(context)
+          ? CrossAxisAlignment.start
+          : CrossAxisAlignment.center,
       children: [
         Text(
           appReward.title,
@@ -78,7 +86,9 @@ class AppRewardsItem extends StatelessWidget {
           height: kDefaultPadding / 3,
         ),
         RichText(
-          textAlign: TextAlign.start,
+          textAlign: Responsive.isDesktop(context)
+              ? TextAlign.start
+              : TextAlign.center,
           text: TextSpan(
             text: appRewardsDemoText,
             style: TextStyle(

@@ -31,9 +31,6 @@ class AppRewardsSection extends StatelessWidget {
       child: Column(
         children: [
           AppRewardsTopContainer(),
-          SizedBox(
-            height: kDefaultPadding,
-          ),
           AppRewardsListContainer(),
           SizedBox(
             height: kDefaultPadding,

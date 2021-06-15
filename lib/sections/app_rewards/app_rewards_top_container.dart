@@ -16,7 +16,7 @@ class AppRewardsTopContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AppRewardsTitleText(context),
+                appRewardsTitleText(context),
                 SizedBox(
                   child: Container(
                     margin: EdgeInsets.symmetric(
@@ -29,7 +29,7 @@ class AppRewardsTopContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                AppRewardsDescriptionText(context),
+                appRewardsDescriptionText(context),
               ],
             )
           : Row(
@@ -39,7 +39,7 @@ class AppRewardsTopContainer extends StatelessWidget {
               children: [
                 Flexible(
                   flex: 1,
-                  child: AppRewardsTitleText(context),
+                  child: appRewardsTitleText(context),
                 ),
                 SizedBox(
                   child: Container(
@@ -58,14 +58,14 @@ class AppRewardsTopContainer extends StatelessWidget {
                 ),
                 Flexible(
                   flex: 1,
-                  child: AppRewardsDescriptionText(context),
+                  child: appRewardsDescriptionText(context),
                 ),
               ],
             ),
     );
   }
 
-  Widget AppRewardsTitleText(BuildContext context) {
+  Widget appRewardsTitleText(BuildContext context) {
     String titleText =
         "Smart Jackpots that \nyou may love this \nanytime & anywhere";
 
@@ -87,7 +87,7 @@ class AppRewardsTopContainer extends StatelessWidget {
     );
   }
 
-  Widget AppRewardsDescriptionText(BuildContext context) {
+  Widget appRewardsDescriptionText(BuildContext context) {
     String descText =
         "The rise of mobile devices transforms the way we \nconsume information entirely and the world's most \nrelevant channels such as facebook.";
 
