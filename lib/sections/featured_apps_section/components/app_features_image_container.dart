@@ -11,44 +11,40 @@ class AppFeaturesImageContainer extends StatelessWidget {
     return Opacity(
       opacity: Responsive.isMobile(context) ? 0.08 : 1.0,
       child: Container(
+        constraints: BoxConstraints(
+          maxHeight: 560,
+          minHeight: 540,
+        ),
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Stack(
-              children: [
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Image(
-                    width: screenSize.width,
-                    height: screenSize.height / 1.8,
-                    fit: BoxFit.contain,
-                    image: AssetImage("assets/images/feature_image_bg1.png"),
-                  ),
-                ),
-                Positioned(
-                  bottom: 0.0,
-                  left: 0.0,
-                  child: Image(
-                    width: screenSize.width / 3.8,
-                    height: screenSize.height / 3.2,
-                    fit: BoxFit.contain,
-                    image: AssetImage("assets/images/feature_image_bg2.png"),
-                  ),
-                ),
-              ],
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
+            Center(
               child: Container(
-                padding: EdgeInsets.only(
-                  bottom: screenSize.height / 14,
+                height: 380,
+                width: screenSize.width < 800 ? screenSize.width / 3 : 520,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "assets/images/feature_image_bg1.png",
+                    ),
+                    fit: BoxFit.contain,
+                  ),
                 ),
-                child: Image(
-                  width: screenSize.width,
-                  height: screenSize.height / 1.4,
-                  fit: BoxFit.fitHeight,
-                  image: AssetImage("assets/images/feature_image_1.png"),
+              ),
+            ),
+            Positioned(
+              top: 0,
+              child: Container(
+                child: Center(
+                  child: Image(
+                    image: AssetImage(
+                      "assets/images/feature_image_1.png",
+                    ),
+                    height: 520,
+                    width: screenSize.width < 800 ? screenSize.width / 3 : 520,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),
