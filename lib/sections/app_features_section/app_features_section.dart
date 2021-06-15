@@ -26,7 +26,7 @@ class AppFeaturesSection extends StatelessWidget {
       ),
       width: double.infinity,
       constraints: BoxConstraints(
-        maxWidth: 1110,
+        maxWidth: kMaxWidth,
       ),
       child: Responsive.isMobile(context)
           ? featuredAppsMobileLayout(context)

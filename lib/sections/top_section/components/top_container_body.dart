@@ -33,8 +33,10 @@ class TopContainerBody extends StatelessWidget {
       children: [
         Container(
           child: Container(
-            alignment: Alignment.center,
-            padding: const EdgeInsets.all(kDefaultPadding),
+            alignment: Alignment.centerRight,
+            padding: EdgeInsets.all(
+              kDefaultPadding,
+            ),
             child: topContainerTextLayout(context),
           ),
         ),

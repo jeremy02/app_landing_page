@@ -24,7 +24,7 @@ class AppFeaturesContentContainer extends StatelessWidget {
             fontSize: 28,
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            height: 1.0,
+            height: 1.2,
           ),
         ),
         SizedBox(

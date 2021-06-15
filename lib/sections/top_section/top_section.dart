@@ -17,8 +17,10 @@ class TopSection extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      child: Container(
-        padding: EdgeInsets.all(kDefaultPadding),
+      child: Padding(
+        padding: EdgeInsets.all(
+          kDefaultPadding,
+        ),
         child: Stack(
           children: [
             topSectionBackground(topSectionSize.height),

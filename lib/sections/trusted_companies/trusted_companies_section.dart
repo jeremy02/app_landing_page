@@ -21,7 +21,7 @@ class TrustedCompaniesSection extends StatelessWidget {
         ),
         width: double.infinity,
         constraints: BoxConstraints(
-          maxWidth: 1110,
+          maxWidth: kMaxWidth,
         ),
         child: Column(
           children: [

@@ -13,7 +13,7 @@ class AppRewardsListContainer extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(
-        kDefaultPadding,
+        kDefaultPadding / 2,
       ),
       child: Responsive.isMobile(context) || Responsive.isTablet(context)
           ? Column(
