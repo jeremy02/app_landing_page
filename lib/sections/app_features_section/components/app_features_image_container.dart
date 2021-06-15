@@ -11,18 +11,17 @@ class AppFeaturesImageContainer extends StatelessWidget {
     return Opacity(
       opacity: Responsive.isMobile(context) ? 0.08 : 1.0,
       child: Container(
-        constraints: BoxConstraints(
-          maxHeight: 560,
-          minHeight: 540,
+        height: 500,
+        padding: EdgeInsets.symmetric(
+          horizontal: kDefaultPadding,
         ),
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Stack(
           alignment: Alignment.center,
           children: [
             Center(
               child: Container(
-                height: 380,
-                width: screenSize.width < 800 ? screenSize.width / 3 : 520,
+                height: 350,
+                width: screenSize.width < 800 ? screenSize.width / 3 : 450,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
@@ -41,8 +40,8 @@ class AppFeaturesImageContainer extends StatelessWidget {
                     image: AssetImage(
                       "assets/images/feature_image_1.png",
                     ),
-                    height: 520,
-                    width: screenSize.width < 800 ? screenSize.width / 3 : 520,
+                    height: 500,
+                    width: screenSize.width < 800 ? screenSize.width / 3 : 450,
                     fit: BoxFit.contain,
                   ),
                 ),

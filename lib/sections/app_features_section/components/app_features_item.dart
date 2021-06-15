@@ -1,5 +1,5 @@
 import 'package:app_landing_page/constants.dart';
-import 'package:app_landing_page/sections/featured_apps_section/models/app_feature.dart';
+import 'package:app_landing_page/sections/app_features_section/models/app_feature.dart';
 import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -56,6 +56,14 @@ class AppFeaturesItem extends StatelessWidget {
 
   // show the view for the app feautures description
   Widget featureDescription(BuildContext context) {
+    String appFeaturesDemoText =
+        "Get your blood tests delivered at home collect a sample from the news your blood tests.";
+
+    if (!Responsive.isMobile(context)) {
+      appFeaturesDemoText =
+          "Get your blood tests delivered at \nhome collect a sample from the \nnews your blood tests.";
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -70,14 +78,16 @@ class AppFeaturesItem extends StatelessWidget {
         SizedBox(
           height: kDefaultPadding / 3,
         ),
-        Text(
-          appFeature.description,
+        RichText(
           textAlign: TextAlign.start,
-          style: TextStyle(
-            fontSize: 14,
-            color: Color.fromARGB(255, 129, 131, 135),
-            fontWeight: FontWeight.w500,
-            height: 1.2,
+          text: TextSpan(
+            text: appFeaturesDemoText,
+            style: TextStyle(
+              fontSize: 14,
+              color: Color.fromARGB(255, 129, 131, 135),
+              fontWeight: FontWeight.w500,
+              height: 1.2,
+            ),
           ),
         ),
       ],

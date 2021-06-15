@@ -20,12 +20,14 @@ class AppFeaturesSection extends StatelessWidget {
     }
 
     return Container(
-      margin: EdgeInsets.only(
-        left: kDefaultPaddingS,
-        right: kDefaultPaddingS,
-        bottom: kDefaultPaddingS,
+      padding: EdgeInsets.symmetric(
+        horizontal: kDefaultPadding,
+        vertical: kDefaultPadding,
       ),
       width: double.infinity,
+      constraints: BoxConstraints(
+        maxWidth: 1110,
+      ),
       child: Responsive.isMobile(context)
           ? featuredAppsMobileLayout(context)
           : featuredAppsParentLayout(context),
@@ -49,11 +51,11 @@ class AppFeaturesSection extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         Expanded(
-          flex: 6,
+          flex: 7,
           child: AppFeaturesImageContainer(),
         ),
         Expanded(
-          flex: 7,
+          flex: 8,
           child: AppFeaturesContentContainer(),
         ),
       ],

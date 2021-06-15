@@ -33,7 +33,7 @@ List demoAppFeaturesData = [
     "title": "Prototyping",
     "description": appFeaturesDemoText,
     "image": "assets/icons/ic_prototyping.png",
-    "titleColor": Color.fromARGB(255, 167, 187, 255),
+    "titleColor": Colors.blue,
   },
   {
     "title": "Vector Editing",
