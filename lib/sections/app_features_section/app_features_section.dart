@@ -8,17 +8,6 @@ import 'components/app_features_image_container.dart';
 class AppFeaturesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double kDefaultPaddingS = kDefaultPadding;
-
-    if (Responsive.isDesktop(context)) {
-      kDefaultPaddingS = kDefaultPadding * 4;
-    }
-
-    // if is tablet
-    if (Responsive.isTablet(context)) {
-      kDefaultPaddingS = kDefaultPadding * 2;
-    }
-
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: kDefaultPadding,

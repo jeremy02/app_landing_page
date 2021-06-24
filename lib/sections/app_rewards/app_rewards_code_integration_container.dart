@@ -12,7 +12,7 @@ class CodeIntegrationContainer extends StatelessWidget {
     double kDefaultPaddingS = kDefaultPadding;
 
     if (Responsive.isDesktop(context)) {
-      kDefaultPaddingS = kDefaultPadding * 4;
+      kDefaultPaddingS = kDefaultPadding * 2;
     }
 
     // if is tablet
@@ -24,9 +24,9 @@ class CodeIntegrationContainer extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.fromLTRB(
         kDefaultPaddingS,
-        0.0,
+        kDefaultPadding,
         kDefaultPaddingS,
-        kDefaultPaddingS,
+        kDefaultPadding,
       ),
       padding: EdgeInsets.all(10.0),
       constraints: BoxConstraints(

@@ -9,17 +9,6 @@ import 'app_rewards_top_container.dart';
 class AppRewardsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double kDefaultPaddingS = kDefaultPadding;
-
-    if (Responsive.isDesktop(context)) {
-      kDefaultPaddingS = kDefaultPadding * 4;
-    }
-
-    // if is tablet
-    if (Responsive.isTablet(context)) {
-      kDefaultPaddingS = kDefaultPadding * 2;
-    }
-
     return Column(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -47,6 +36,17 @@ class AppRewardsSection extends StatelessWidget {
           ),
         ),
         CodeIntegrationContainer(),
+        SizedBox(
+          height: Responsive.isDesktop(context)
+              ? kDefaultPadding * 2
+              : kDefaultPadding,
+        ),
+        Divider(),
+        SizedBox(
+          height: Responsive.isDesktop(context)
+              ? kDefaultPadding * 2
+              : kDefaultPadding,
+        ),
       ],
     );
   }

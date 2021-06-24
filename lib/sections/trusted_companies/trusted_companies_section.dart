@@ -11,8 +11,6 @@ class TrustedCompaniesSection extends StatelessWidget {
     final TrustedCompanyController _controller =
         Get.put(TrustedCompanyController());
 
-    Size screenSize = MediaQuery.of(context).size;
-
     return SafeArea(
       child: Container(
         margin: EdgeInsets.symmetric(
