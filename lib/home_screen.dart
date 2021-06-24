@@ -1,4 +1,5 @@
 import 'package:app_landing_page/constants.dart';
+import 'package:app_landing_page/sections/app_built_features/app_built_features_section.dart';
 import 'package:app_landing_page/sections/app_features_section/app_features_section.dart';
 import 'package:app_landing_page/sections/app_product_features_section/app_product_features_section.dart';
 import 'package:app_landing_page/sections/app_rewards/app_rewards_section.dart';
@@ -36,6 +37,7 @@ class HomeScreen extends StatelessWidget {
               ),
               AppRewardsSection(),
               AppProductFeaturesSection(),
+              AppBuildFeaturesSection(),
             ],
           ),
         ),
@@ -57,6 +59,7 @@ class HomeScreen extends StatelessWidget {
               ),
               AppRewardsSection(),
               AppProductFeaturesSection(),
+              AppBuildFeaturesSection(),
             ],
           ),
         ),
@@ -78,6 +81,7 @@ class HomeScreen extends StatelessWidget {
               ),
               AppRewardsSection(),
               AppProductFeaturesSection(),
+              AppBuildFeaturesSection(),
             ],
           ),
         ),
