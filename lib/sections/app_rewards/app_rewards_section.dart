@@ -43,9 +43,7 @@ class AppRewardsSection extends StatelessWidget {
         ),
         Divider(),
         SizedBox(
-          height: Responsive.isDesktop(context)
-              ? kDefaultPadding * 2
-              : kDefaultPadding,
+          height: kDefaultPadding,
         ),
       ],
     );

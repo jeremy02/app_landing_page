@@ -12,6 +12,14 @@ const kDefaultPadding = 20.0;
 const kMaxWidth = 1232.0;
 const kDefaultDuration = Duration(milliseconds: 250);
 
+const kPrimaryColor1 = Color(0xff242f51);
+const kPrimaryColor2 = Color(0xff616368);
+const kPrimaryColor3 = Color(0xff2563ff);
+
+const kSecondaryColor1 = Color(0xff40975f);
+const kSecondaryColor2 = Color(0xff616368);
+const kSecondaryColor3 = Color(0xfff55767);
+
 const kSecondaryColor = Color(0xFFF5F6FC);
 const kBgLightColor = Color(0xFFF2F4FC);
 const kBgDarkColor = Color(0xFFEBEDFA);
