@@ -1,4 +1,6 @@
 import 'package:app_landing_page/components/app_product_features_item.dart';
+import 'package:app_landing_page/components/section_caption.dart';
+import 'package:app_landing_page/components/section_title.dart';
 import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,11 +30,18 @@ class AppProductFeaturesSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        appProductFeaturesTitle(),
+        SectionTitle(
+          text: "Why you should choose \nour app",
+          fontSize: 24,
+          alignStart: false,
+        ),
         SizedBox(
           height: kDefaultPadding,
         ),
-        appProductFeaturesTitleCaption(context),
+        SectionCaption(
+          fontSize: 14,
+          alignStart: false,
+        ),
         SizedBox(
           height: kDefaultPadding * 2,
         ),
@@ -85,11 +94,22 @@ class AppProductFeaturesSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        appProductFeaturesTitle(),
-        SizedBox(
-          height: kDefaultPadding,
+        SectionTitle(
+          text: "Why you should choose \nour app",
+          fontSize: 24,
+          alignStart: false,
         ),
-        appProductFeaturesTitleCaption(context),
+        SizedBox(
+          height: 6.0,
+        ),
+        SectionTitle(
+          fontSize: 14,
+          alignStart: false,
+        ),
+        SectionCaption(
+          fontSize: 14,
+          alignStart: false,
+        ),
         SizedBox(
           height: kDefaultPadding * 2,
         ),
@@ -145,43 +165,6 @@ class AppProductFeaturesSection extends StatelessWidget {
         index: index,
         alignStart: false,
         press: () {},
-      ),
-    );
-  }
-
-  Widget appProductFeaturesTitle() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        text: "Why you should choose \nour app",
-        style: TextStyle(
-          fontSize: 22,
-          color: Colors.black,
-          fontWeight: FontWeight.w600,
-          height: 1.2,
-        ),
-      ),
-    );
-  }
-
-  Widget appProductFeaturesTitleCaption(BuildContext context) {
-    String captionText =
-        "The rise of mobile devices transforms the way we consume information entirely and the world's most elevaant channels such as Facebook.";
-
-    if (!Responsive.isMobile(context)) {
-      captionText =
-          "The rise of mobile devices transforms the way we consume information entirely \nand the world's most elevaant channels such as Facebook.";
-    }
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        text: captionText,
-        style: TextStyle(
-          fontSize: 14,
-          color: kPrimaryColor2,
-          fontWeight: FontWeight.w600,
-          height: 1.25,
-        ),
       ),
     );
   }

@@ -2,23 +2,19 @@ import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import 'components/app_built_features_container.dart';
+import 'components/app_built_features_content.dart';
+import 'components/app_built_features_image_container.dart';
 
 class AppBuildFeaturesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size topSectionSize = MediaQuery.of(context).size;
+    Size screenSize = MediaQuery.of(context).size;
 
     return Container(
       alignment: Alignment.topCenter,
-      height: topSectionSize.height,
+      height: screenSize.height,
       width: double.infinity,
-      decoration: BoxDecoration(),
-      padding: EdgeInsets.only(
-        top: 0,
-        left: Responsive.isMobile(context) ? kDefaultPadding : 0,
-      ),
-      child: Responsive.isMobile(context)
+      child: !Responsive.isDesktop(context)
           ? appBuiltFeaturesMobileLayout(context)
           : appBuiltFeaturesParentLayout(context),
     );
@@ -29,7 +25,12 @@ class AppBuildFeaturesSection extends StatelessWidget {
     return Stack(
       children: [
         AppBuiltFeaturesImageContainer(),
-        AppBuiltFeaturesContentContainer(context),
+        Padding(
+          padding: EdgeInsets.all(
+            kDefaultPadding,
+          ),
+          child: AppBuiltFeaturesContentContainer(),
+        ),
       ],
     );
   }
@@ -40,21 +41,22 @@ class AppBuildFeaturesSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.max,
       children: [
-        Expanded(flex: 8, child: AppBuiltFeaturesContentContainer(context)),
-        Expanded(
+        Flexible(
+          flex: 9,
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(),
+              ),
+              AppBuiltFeaturesContentContainer(),
+            ],
+          ),
+        ),
+        Flexible(
           flex: 7,
           child: AppBuiltFeaturesImageContainer(),
         ),
       ],
-    );
-  }
-
-  // build for tablet and web
-  Widget AppBuiltFeaturesContentContainer(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.yellow,
     );
   }
 }

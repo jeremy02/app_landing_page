@@ -22,9 +22,9 @@ class DefaultButton extends StatelessWidget {
         style: TextButton.styleFrom(
           backgroundColor: Color.fromARGB(255, 37, 0, 249),
           padding: EdgeInsets.symmetric(
-            horizontal: kDefaultPadding * 1.5,
+            horizontal: kDefaultPadding * 2,
             vertical:
-                kDefaultPadding / (Responsive.isDesktop(context) ? 1 : 1.2),
+                kDefaultPadding / (Responsive.isDesktop(context) ? 1.2 : 1.2),
           ),
         ),
         child: Text(

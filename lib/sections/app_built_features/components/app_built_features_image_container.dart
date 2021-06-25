@@ -10,7 +10,7 @@ class AppBuiltFeaturesImageContainer extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
 
     return Opacity(
-      opacity: Responsive.isMobile(context) ? 0.08 : 1.0,
+      opacity: !Responsive.isDesktop(context) ? 0.02 : 1.0,
       child: Container(
         margin: EdgeInsets.only(
           top: kDefaultPadding * 3,
@@ -31,7 +31,7 @@ class AppBuiltFeaturesImageContainer extends StatelessWidget {
                       "assets/images/ic_built_features_bg.png",
                     ),
                     height: screenSize.height,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fitHeight,
                   ),
                 ),
               ),

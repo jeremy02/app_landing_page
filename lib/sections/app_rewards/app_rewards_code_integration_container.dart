@@ -1,4 +1,6 @@
 import 'package:app_landing_page/components/default_button.dart';
+import 'package:app_landing_page/components/section_caption.dart';
+import 'package:app_landing_page/components/section_title.dart';
 import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -96,30 +98,17 @@ class CodeIntegrationContainer extends StatelessWidget {
         SizedBox(
           height: kDefaultPadding,
         ),
-        RichText(
-          text: TextSpan(
-            text: "Designed & built by \nthe latest code \nintegration",
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              height: 1.2,
-            ),
-          ),
+        SectionTitle(
+          text: "Designed & built by \nthe latest code \nintegration",
+          fontSize: 24,
+          alignStart: true,
         ),
         SizedBox(
           height: kDefaultPadding,
         ),
-        RichText(
-          text: TextSpan(
-            text: demoText,
-            style: TextStyle(
-              fontSize: 14,
-              color: Color.fromARGB(255, 129, 131, 135),
-              fontWeight: FontWeight.w500,
-              height: 1.2,
-            ),
-          ),
+        SectionCaption(
+          fontSize: 14,
+          alignStart: true,
         ),
         SizedBox(
           height: kDefaultPadding,

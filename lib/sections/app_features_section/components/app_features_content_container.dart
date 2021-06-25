@@ -1,3 +1,4 @@
+import 'package:app_landing_page/components/section_title.dart';
 import 'package:app_landing_page/constants.dart';
 import 'package:app_landing_page/sections/app_features_section/models/app_feature.dart';
 import 'package:app_landing_page/utils/responsive.dart';
@@ -17,15 +18,10 @@ class AppFeaturesContentContainer extends StatelessWidget {
           SizedBox(
             height: kDefaultPadding,
           ),
-        Text(
-          "Awesome Apps \nfeatures",
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            fontSize: 28,
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            height: 1.2,
-          ),
+        SectionTitle(
+          text: "Awesome Apps \nfeatures",
+          fontSize: 28,
+          alignStart: true,
         ),
         SizedBox(
           height: kDefaultPadding / 4,

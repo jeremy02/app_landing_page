@@ -1,3 +1,5 @@
+import 'package:app_landing_page/components/section_caption.dart';
+import 'package:app_landing_page/components/section_title.dart';
 import 'package:app_landing_page/constants.dart';
 import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +31,10 @@ class AppRewardsTopContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                appRewardsDescriptionText(context),
+                SectionCaption(
+                  fontSize: 14,
+                  alignStart: true,
+                ),
               ],
             )
           : Row(
@@ -58,7 +63,10 @@ class AppRewardsTopContainer extends StatelessWidget {
                 ),
                 Flexible(
                   flex: 1,
-                  child: appRewardsDescriptionText(context),
+                  child: SectionCaption(
+                    fontSize: 14,
+                    alignStart: true,
+                  ),
                 ),
               ],
             ),
@@ -69,42 +77,14 @@ class AppRewardsTopContainer extends StatelessWidget {
     String titleText =
         "Smart Jackpots that \nyou may love this \nanytime & anywhere";
 
-    if (Responsive.isMobile(context)) {
+    if (Responsive.isDesktop(context)) {
       titleText = "Smart Jackpots that you may love this anytime & anywhere";
     }
 
-    return RichText(
-      textAlign: TextAlign.start,
-      text: TextSpan(
-        text: titleText,
-        style: TextStyle(
-          fontSize: 22,
-          color: Colors.black,
-          fontWeight: FontWeight.w600,
-          height: 1.2,
-        ),
-      ),
-    );
-  }
-
-  Widget appRewardsDescriptionText(BuildContext context) {
-    String descText =
-        "The rise of mobile devices transforms the way we \nconsume information entirely and the world's most \nrelevant channels such as facebook.";
-
-    if (Responsive.isMobile(context)) {
-      descText =
-          "The rise of mobile devices transforms the way we consume information entirely and the world's most relevant channels such as facebook.";
-    }
-    return RichText(
-      text: TextSpan(
-        text: descText,
-        style: TextStyle(
-          fontSize: 14,
-          color: Color.fromARGB(255, 129, 131, 135),
-          fontWeight: FontWeight.w500,
-          height: 1.2,
-        ),
-      ),
+    return SectionTitle(
+      text: titleText,
+      fontSize: 24,
+      alignStart: true,
     );
   }
 }
