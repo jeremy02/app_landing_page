@@ -20,7 +20,7 @@ class DefaultButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: buttonPress,
         style: TextButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 37, 0, 249),
+          backgroundColor: kPrimaryColor3,
           padding: EdgeInsets.symmetric(
             horizontal: kDefaultPadding * 2,
             vertical:

@@ -64,7 +64,9 @@ class TopContainerBody extends StatelessWidget {
                   : constraints.maxWidth,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  fit: BoxFit.fitHeight,
+                  fit: Responsive.isDesktop(context)
+                      ? BoxFit.fitHeight
+                      : BoxFit.contain,
                   image: AssetImage("assets/images/top_image_1.png"),
                 ),
               ),
@@ -133,7 +135,7 @@ class TopContainerBody extends StatelessWidget {
                           text: "Watch demo video",
                           style: TextStyle(
                             fontSize: 12,
-                            color: Color.fromARGB(255, 37, 0, 249),
+                            color: kPrimaryColor3,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
