@@ -13,9 +13,8 @@ class TrustedCompaniesSection extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-        margin: EdgeInsets.symmetric(
-          vertical: kDefaultPadding * 2,
-          horizontal: kDefaultPadding,
+        margin: EdgeInsets.all(
+          kDefaultPadding,
         ),
         width: double.infinity,
         constraints: BoxConstraints(

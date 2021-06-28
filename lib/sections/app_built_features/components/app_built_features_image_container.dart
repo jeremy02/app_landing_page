@@ -15,7 +15,9 @@ class AppBuiltFeaturesImageContainer extends StatelessWidget {
         margin: EdgeInsets.only(
           top: kDefaultPadding * 3,
         ),
-        height: 500,
+        constraints: BoxConstraints(
+          maxHeight: 500,
+        ),
         padding: EdgeInsets.symmetric(
           horizontal: kDefaultPadding,
         ),

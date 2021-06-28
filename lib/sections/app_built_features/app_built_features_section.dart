@@ -12,8 +12,10 @@ class AppBuildFeaturesSection extends StatelessWidget {
 
     return Container(
       alignment: Alignment.topCenter,
-      height: screenSize.height,
       width: double.infinity,
+      padding: EdgeInsets.symmetric(
+        vertical: kDefaultPadding,
+      ),
       child: !Responsive.isDesktop(context)
           ? appBuiltFeaturesMobileLayout(context)
           : appBuiltFeaturesParentLayout(context),

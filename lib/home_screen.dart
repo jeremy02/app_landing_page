@@ -3,6 +3,7 @@ import 'package:app_landing_page/sections/app_built_features/app_built_features_
 import 'package:app_landing_page/sections/app_features_section/app_features_section.dart';
 import 'package:app_landing_page/sections/app_product_features_section/app_product_features_section.dart';
 import 'package:app_landing_page/sections/app_rewards/app_rewards_section.dart';
+import 'package:app_landing_page/sections/pricing_section/app_pricing_section.dart';
 import 'package:app_landing_page/sections/top_section/top_section.dart';
 import 'package:app_landing_page/sections/trusted_companies/trusted_companies_section.dart';
 import 'package:app_landing_page/utils/responsive.dart';
@@ -38,6 +39,7 @@ class HomeScreen extends StatelessWidget {
               AppRewardsSection(),
               AppProductFeaturesSection(),
               AppBuildFeaturesSection(),
+              AppPricingSection(),
             ],
           ),
         ),
@@ -60,6 +62,7 @@ class HomeScreen extends StatelessWidget {
               AppRewardsSection(),
               AppProductFeaturesSection(),
               AppBuildFeaturesSection(),
+              AppPricingSection(),
             ],
           ),
         ),
@@ -82,6 +85,7 @@ class HomeScreen extends StatelessWidget {
               AppRewardsSection(),
               AppProductFeaturesSection(),
               AppBuildFeaturesSection(),
+              AppPricingSection(),
             ],
           ),
         ),
