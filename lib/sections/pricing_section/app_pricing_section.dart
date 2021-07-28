@@ -3,7 +3,8 @@ import 'package:app_landing_page/components/section_title.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import 'components/app_button_pricing_toggle.dart';
+import 'components/app_button_pricing.dart';
+import 'components/app_pricing_plans.dart';
 
 class AppPricingSection extends StatelessWidget {
   @override
@@ -41,7 +42,14 @@ class AppPricingSection extends StatelessWidget {
               SizedBox(
                 height: kDefaultPadding * 2,
               ),
-              AppButtonPricingToggle()
+              AppButtonPricing(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
+              AppPricingPlans(),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
             ],
           ),
         ),

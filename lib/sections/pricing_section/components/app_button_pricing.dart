@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class AppButtonPricingToggle extends StatefulWidget {
+class AppButtonPricing extends StatefulWidget {
   @override
-  _AppButtonPricingToggleState createState() => _AppButtonPricingToggleState();
+  _AppButtonPricingState createState() => _AppButtonPricingState();
 }
 
-class _AppButtonPricingToggleState extends State<AppButtonPricingToggle> {
+class _AppButtonPricingState extends State<AppButtonPricing> {
   bool _isActive = true;
 
   @override
