@@ -15,3 +15,7 @@ The mobile or web app was created to simulate all the system behind the UI kit i
 App Preview
 :-------------------------:
 ![](assets/screenshots/app_preview.png)
+
+Full App UI Preview
+:-------------------------:
+![](assets/screenshots/full_app_preview.png.png)
