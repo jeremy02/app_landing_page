@@ -12,10 +12,13 @@ The mobile or web app was created to simulate all the system behind the UI kit i
 
 ### App Landing Page Responsive Final UI
 
-#### App Preview
-:-------------------------:
-![](assets/screenshots/app_preview.png)
+#### The App UI Preview
+
+App Preview           |      Home Page Preview
+:-------------------------:|:-------------------------:
+![](assets/screenshots/app_preview.png)  |  ![](assets/screenshots/app_preview_home.png)
 
 #### Full App UI Preview
+Full App UI Preview
 :-------------------------:
 ![](assets/screenshots/full_app_preview.png.png)
