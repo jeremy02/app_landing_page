@@ -22,3 +22,9 @@ App Preview           |      Home Page Preview
 Full App UI Preview
 :-------------------------:
 ![](assets/screenshots/full_app_preview.png.png)
+
+## Design Details
+As exposed on the shared dribble link, there's all the design details also present in this app landing page.
+
+## Notes
+In Progress
