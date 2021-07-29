@@ -12,4 +12,6 @@ The mobile or web app was created to simulate all the system behind the UI kit i
 
 ### App Landing Page Responsive Final UI
 
-![Preview](assets/screenshots/app_preview.png)
+App Preview
+:-------------------------:
+![](assets/screenshots/app_preview.png)
