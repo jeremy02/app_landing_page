@@ -41,6 +41,7 @@ class CustomAppBar extends StatelessWidget {
             ),
           DefaultButton(
             buttonText: "Try for free",
+            fontSize: 14.0,
             buttonPress: () => {},
           ),
         ],

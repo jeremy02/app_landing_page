@@ -8,9 +8,11 @@ class DefaultButton extends StatelessWidget {
     Key key,
     @required this.buttonText,
     @required this.buttonPress,
+    @required this.fontSize,
   }) : super(key: key);
 
   final String buttonText;
+  final double fontSize;
   final VoidCallback buttonPress;
 
   @override
@@ -30,7 +32,7 @@ class DefaultButton extends StatelessWidget {
         child: Text(
           buttonText,
           style: TextStyle(
-            fontSize: 14,
+            fontSize: fontSize,
             fontWeight: FontWeight.w600,
             color: Colors.white,
           ),

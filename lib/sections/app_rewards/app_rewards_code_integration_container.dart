@@ -115,6 +115,7 @@ class CodeIntegrationContainer extends StatelessWidget {
         ),
         DefaultButton(
           buttonText: "Learn More",
+          fontSize: 14.0,
           buttonPress: () => {},
         ),
       ],

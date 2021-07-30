@@ -63,6 +63,7 @@ class AppBuiltFeaturesContentContainer extends StatelessWidget {
         ),
         DefaultButton(
           buttonText: " See all ",
+          fontSize: 14.0,
           buttonPress: () => {},
         ),
       ],

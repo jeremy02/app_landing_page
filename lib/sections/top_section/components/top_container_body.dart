@@ -123,6 +123,7 @@ class TopContainerBody extends StatelessWidget {
                   children: [
                     DefaultButton(
                       buttonText: "Try for free",
+                      fontSize: 14.0,
                       buttonPress: () => {},
                     ),
                     SizedBox(

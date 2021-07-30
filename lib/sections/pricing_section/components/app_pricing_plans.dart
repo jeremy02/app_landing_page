@@ -26,6 +26,11 @@ class _AppPricingPlansState extends State<AppPricingPlans> {
       children: [
         AppPricingPlansCard(
           index: 0,
+          price: 0,
+          planTitle: "Business Class",
+          planDescription: "For small teams or office",
+          actionText: "Start free trial",
+          hasTrial: false,
           press: () {},
         ),
         SizedBox(
@@ -33,6 +38,11 @@ class _AppPricingPlansState extends State<AppPricingPlans> {
         ),
         AppPricingPlansCard(
           index: 1,
+          price: 90,
+          planTitle: "Pro Master",
+          planDescription: "For Best Opportunities",
+          actionText: "Subscribe Now",
+          hasTrial: true,
           press: () {},
         ),
       ],
