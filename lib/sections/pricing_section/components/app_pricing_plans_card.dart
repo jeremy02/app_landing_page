@@ -32,74 +32,66 @@ class AppPricingPlansCard extends StatefulWidget {
 class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
   bool isHover = false;
 
+  List<String> litems = [
+    "Drag & Drop Builder",
+    "1000's of Templates",
+    "Blog Support Tools",
+    "eCommerce Store"
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        AnimatedContainer(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(
-              width: widget.index == 0 ? 0.0 : 1.4,
-              color: widget.index == 0 ? Colors.transparent : kBgColor,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Color.fromRGBO(239, 247, 249, 1.0),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 9), // changes position of shadow
-              ),
-            ],
-            borderRadius: BorderRadius.circular(8.0),
-          ),
-          duration: Duration(
-            milliseconds: 200,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              topContainer(),
-              pricingItemsContainer(),
-              DefaultButton(
-                buttonText: widget.actionText,
-                fontSize: 12.0,
-                buttonPress: () => {},
-              ),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  text: widget.hasTrial ? "Or Start 14 days trial" : "",
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: kPrimaryColor3,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-            ],
-          ),
+    return AnimatedContainer(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(
+          width: widget.index == 0 ? 0.0 : 1.4,
+          color: widget.index == 0 ? Colors.transparent : kBgColor,
         ),
-        Positioned.fill(
-          child: Material(
-            borderRadius: BorderRadius.circular(8.0),
-            color: Colors.transparent,
-            child: InkWell(
-              splashColor: Colors.transparent,
-              borderRadius: BorderRadius.circular(8.0),
-              onTap: () => widget.press,
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(239, 247, 249, 1.0),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 9), // changes position of shadow
+          ),
+        ],
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      duration: Duration(
+        milliseconds: 200,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          topContainer(),
+          pricingItemsContainer(),
+          DefaultButton(
+            buttonText: widget.actionText,
+            fontSize: 12.0,
+            buttonPress: () => {},
+          ),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: widget.hasTrial ? "Or Start 14 days trial" : "",
+              style: TextStyle(
+                fontSize: 10,
+                color: kPrimaryColor3,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
-        ),
-      ],
+          SizedBox(
+            height: kDefaultPadding,
+          ),
+        ],
+      ),
     );
   }
 
@@ -136,7 +128,7 @@ class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
                 text: TextSpan(
                   children: <TextSpan>[
                     TextSpan(
-                      text: '\$0',
+                      text: '\$${widget.price}',
                       style: TextStyle(
                         fontSize: 40,
                         color: kPrimaryColor1,
@@ -144,7 +136,7 @@ class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
                       ),
                     ),
                     TextSpan(
-                      text: " / month",
+                      text: "/ month",
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.grey,
@@ -163,7 +155,7 @@ class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
             text: TextSpan(
               children: <TextSpan>[
                 TextSpan(
-                  text: 'Business Class',
+                  text: widget.planTitle,
                   style: TextStyle(
                     fontSize: 14,
                     color: kPrimaryColor1,
@@ -177,11 +169,11 @@ class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
             text: TextSpan(
               children: <TextSpan>[
                 TextSpan(
-                  text: "For small teams or office",
+                  text: widget.planDescription,
                   style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.normal,
+                    fontSize: 10,
+                    color: Colors.grey.withOpacity(0.7),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
@@ -194,67 +186,39 @@ class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
 
   Widget pricingItemsContainer() {
     return Container(
-      padding: EdgeInsets.all(
-        kDefaultPadding,
+      padding: EdgeInsets.only(
+        top: kDefaultPadding,
+        bottom: kDefaultPadding,
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.max,
         children: [
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: "Drag & Drop Builder",
-              style: TextStyle(
-                fontSize: 12,
-                color: kTextColor.withOpacity(0.6),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: kDefaultPadding / 1.5,
-          ),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: "1000's of Templates",
-              style: TextStyle(
-                fontSize: 12,
-                color: kTextColor.withOpacity(0.6),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: kDefaultPadding / 1.5,
-          ),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: "Drag & Drop Builder",
-              style: TextStyle(
-                fontSize: 12,
-                color: kTextColor.withOpacity(0.6),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: kDefaultPadding / 1.5,
-          ),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: "Drag & Drop Builder",
-              style: TextStyle(
-                fontSize: 12,
-                color: kTextColor.withOpacity(0.6),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
+          listItem(litems[0], true),
+          listItem(litems[1], true),
+          listItem(litems[2], true),
+          listItem(litems[3], false),
         ],
       ),
+    );
+  }
+
+  Widget listItem(String litem, bool isBottomPadd) {
+    return Column(
+      children: [
+        RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+            text: litem,
+            style: TextStyle(
+              fontSize: 12,
+              color: kTextColor.withOpacity(0.6),
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: isBottomPadd ? kDefaultPadding : 0,
+        ),
+      ],
     );
   }
 }
