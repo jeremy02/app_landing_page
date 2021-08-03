@@ -5,8 +5,23 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 import 'components/app_button_pricing.dart';
 import 'components/app_pricing_plans.dart';
+import 'components/selected_pricing_state.dart';
 
-class AppPricingSection extends StatelessWidget {
+class AppPricingSection extends StatefulWidget {
+  @override
+  _AppPricingSectionState createState() => _AppPricingSectionState();
+}
+
+class _AppPricingSectionState extends State<AppPricingSection> {
+  bool monthlyActive = true;
+
+  void setActivePricing(bool isMonthlyActive) {
+    setState(() {
+      monthlyActive = isMonthlyActive;
+      print("count" + monthlyActive.toString());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -42,7 +57,11 @@ class AppPricingSection extends StatelessWidget {
               SizedBox(
                 height: kDefaultPadding * 2,
               ),
-              AppButtonPricing(),
+              SelectedPricingState(
+                isActive: monthlyActive,
+                setActivePricing: setActivePricing,
+                child: AppButtonPricing(),
+              ),
               SizedBox(
                 height: kDefaultPadding,
               ),

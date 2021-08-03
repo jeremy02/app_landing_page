@@ -1,4 +1,5 @@
 import 'package:app_landing_page/components/pricing_toggle_button.dart';
+import 'package:app_landing_page/sections/pricing_section/components/selected_pricing_state.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -9,11 +10,9 @@ class AppButtonPricing extends StatefulWidget {
 }
 
 class _AppButtonPricingState extends State<AppButtonPricing> {
-  bool _isActive = true;
-
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    final activePricingState = SelectedPricingState.of(context);
 
     return Container(
       padding: const EdgeInsets.all(
@@ -31,20 +30,18 @@ class _AppButtonPricingState extends State<AppButtonPricing> {
         children: [
           PricingToggleButton(
             buttonText: "Monthly",
-            isActive: _isActive,
+            isActive: activePricingState.isActive,
             buttonPress: () {
-              setState(() {
-                _isActive = !_isActive;
-              });
+              if (!activePricingState.isActive)
+                activePricingState.setActivePricing(true);
             },
           ),
           PricingToggleButton(
             buttonText: "Annually",
-            isActive: !_isActive,
+            isActive: !activePricingState.isActive,
             buttonPress: () {
-              setState(() {
-                _isActive = !_isActive;
-              });
+              if (activePricingState.isActive)
+                activePricingState.setActivePricing(false);
             },
           ),
         ],
