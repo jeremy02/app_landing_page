@@ -1,5 +1,6 @@
 import 'package:app_landing_page/components/section_caption.dart';
 import 'package:app_landing_page/components/section_title.dart';
+import 'package:app_landing_page/sections/app_faqs_section/components/app_faqs.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -40,8 +41,47 @@ class AppFAQsSection extends StatelessWidget {
               SizedBox(
                 height: kDefaultPadding,
               ),
+              AppFAQs(
+                title: "How to contact with riders emergency?",
+                isExpanded: true,
+              ),
+              SizedBox(
+                height: kDefaultPadding / 3,
+              ),
+              AppFAQs(
+                title:
+                    "App installation failed,how to update system information?",
+                isExpanded: false,
+              ),
+              SizedBox(
+                height: kDefaultPadding / 3,
+              ),
+              AppFAQs(
+                title: "Website response taking time,how to improve?",
+                isExpanded: false,
+              ),
+              SizedBox(
+                height: kDefaultPadding / 3,
+              ),
+              AppFAQs(
+                title: "New update fixed fixed all bug and issues",
+                isExpanded: false,
+              ),
+              SizedBox(
+                height: kDefaultPadding / 3,
+              ),
+              AppFAQs(
+                title: "How to contact with riders emergency?",
+                isExpanded: false,
+              ),
+              SizedBox(
+                height: kDefaultPadding / 3,
+              ),
             ],
           ),
+        ),
+        SizedBox(
+          height: kDefaultPadding * 2,
         ),
         Divider(),
         SizedBox(

@@ -18,9 +18,7 @@ class CustomAppBar extends StatelessWidget {
         children: [
           if (!Responsive.isDesktop(context))
             IconButton(
-              onPressed: () {
-                print("onPressed");
-              },
+              onPressed: () {},
               icon: Icon(
                 Icons.menu,
                 color: Colors.black,

@@ -17,8 +17,6 @@ class AppPricingPlans extends StatefulWidget {
 }
 
 class _AppPricingPlansState extends State<AppPricingPlans> {
-  bool isHover = false;
-
   @override
   Widget build(BuildContext context) {
     return Row(
