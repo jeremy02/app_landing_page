@@ -15,9 +15,9 @@ class SectionCaption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String captionText =
-        "The rise of mobile devices transforms the way we consume information entirely and the world's most elevaant channels such as Facebook.";
+        "The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.";
 
-    if (Responsive.isDesktop(context)) {
+    if (!Responsive.isMobile(context)) {
       captionText =
           "The rise of mobile devices transforms the way we consume information entirely \nand the world's most elevant channels such as Facebook.";
     }

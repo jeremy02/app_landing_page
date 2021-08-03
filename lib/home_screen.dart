@@ -1,5 +1,7 @@
 import 'package:app_landing_page/constants.dart';
 import 'package:app_landing_page/sections/app_built_features/app_built_features_section.dart';
+import 'package:app_landing_page/sections/app_clients_section/app_clients_section.dart';
+import 'package:app_landing_page/sections/app_faqs_section/app_faqs_section.dart';
 import 'package:app_landing_page/sections/app_features_section/app_features_section.dart';
 import 'package:app_landing_page/sections/app_product_features_section/app_product_features_section.dart';
 import 'package:app_landing_page/sections/app_rewards/app_rewards_section.dart';
@@ -40,6 +42,8 @@ class HomeScreen extends StatelessWidget {
               AppProductFeaturesSection(),
               AppBuildFeaturesSection(),
               AppPricingSection(),
+              AppClientsSection(),
+              AppFAQsSection(),
             ],
           ),
         ),
@@ -63,6 +67,8 @@ class HomeScreen extends StatelessWidget {
               AppProductFeaturesSection(),
               AppBuildFeaturesSection(),
               AppPricingSection(),
+              AppClientsSection(),
+              AppFAQsSection(),
             ],
           ),
         ),
@@ -86,6 +92,8 @@ class HomeScreen extends StatelessWidget {
               AppProductFeaturesSection(),
               AppBuildFeaturesSection(),
               AppPricingSection(),
+              AppClientsSection(),
+              AppFAQsSection(),
             ],
           ),
         ),
