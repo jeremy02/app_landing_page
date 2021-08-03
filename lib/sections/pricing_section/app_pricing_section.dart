@@ -18,7 +18,6 @@ class _AppPricingSectionState extends State<AppPricingSection> {
   void setActivePricing(bool isMonthlyActive) {
     setState(() {
       monthlyActive = isMonthlyActive;
-      print("count" + monthlyActive.toString());
     });
   }
 
@@ -65,7 +64,7 @@ class _AppPricingSectionState extends State<AppPricingSection> {
               SizedBox(
                 height: kDefaultPadding,
               ),
-              AppPricingPlans(),
+              AppPricingPlans(monthlyActive: monthlyActive),
               SizedBox(
                 height: kDefaultPadding,
               ),

@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 import 'app_pricing_plans_card.dart';
 
 class AppPricingPlans extends StatefulWidget {
-  const AppPricingPlans({Key key, this.index, this.press}) : super(key: key);
-
   final int index;
   final Function press;
+  final bool monthlyActive;
+
+  const AppPricingPlans({Key key, this.index, this.press, this.monthlyActive})
+      : super(key: key);
 
   @override
   _AppPricingPlansState createState() => _AppPricingPlansState();
@@ -27,6 +29,7 @@ class _AppPricingPlansState extends State<AppPricingPlans> {
         AppPricingPlansCard(
           index: 0,
           price: 0,
+          monthlyActive: widget.monthlyActive,
           planTitle: "Business Class",
           planDescription: "For small teams or office",
           actionText: "Start free trial",
@@ -39,6 +42,7 @@ class _AppPricingPlansState extends State<AppPricingPlans> {
         AppPricingPlansCard(
           index: 1,
           price: 90,
+          monthlyActive: widget.monthlyActive,
           planTitle: "Pro Master",
           planDescription: "For Best Opportunities",
           actionText: "Subscribe Now",

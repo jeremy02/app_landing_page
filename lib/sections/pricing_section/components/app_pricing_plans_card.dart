@@ -10,6 +10,7 @@ class AppPricingPlansCard extends StatefulWidget {
     Key key,
     this.index,
     this.price,
+    this.monthlyActive,
     this.planTitle,
     this.planDescription,
     this.actionText,
@@ -19,6 +20,7 @@ class AppPricingPlansCard extends StatefulWidget {
 
   final int index;
   final int price;
+  final bool monthlyActive;
   final String planTitle;
   final String planDescription;
   final String actionText;
@@ -136,7 +138,7 @@ class _AppPricingPlansCardState extends State<AppPricingPlansCard> {
                       ),
                     ),
                     TextSpan(
-                      text: "/ month",
+                      text: widget.monthlyActive ? "/ month" : "/ year",
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.grey,
