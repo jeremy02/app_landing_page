@@ -24,6 +24,7 @@ D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/d
 D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/icons/ic_rewards_payouts.png
 D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/icons/ic_speed.png
 D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/icons/ic_verified.png
+D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/images/app_clients_bg.png
 D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/images/code_integration.png
 D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/images/company_1.png
 D:/Android Works/learning_projects/app_landing_page/build/windows/runner/Debug/data/flutter_assets/assets/images/company_2.png
