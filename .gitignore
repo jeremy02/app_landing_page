@@ -37,8 +37,7 @@
 # All in .dart_tool
 !.dart_tool/
 .dart_tool/*
-!/.dart_tool/
-/.dart_tool/*
+
 # All in build
 !/build/
 /build/*
