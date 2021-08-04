@@ -48,10 +48,13 @@ class _AppFAQstate extends State<AppFAQs> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SectionTitle(
-                text: widget.title,
-                fontSize: 14,
-                alignStart: true,
+              Expanded(
+                flex: 1,
+                child: SectionTitle(
+                  text: widget.title,
+                  fontSize: 14,
+                  alignStart: true,
+                ),
               ),
               InkWell(
                 child: Icon(

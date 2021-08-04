@@ -1,6 +1,7 @@
 import 'package:app_landing_page/components/section_caption.dart';
 import 'package:app_landing_page/components/section_title.dart';
 import 'package:app_landing_page/sections/app_faqs_section/components/app_faqs.dart';
+import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -13,7 +14,9 @@ class AppFAQsSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          height: kDefaultPadding * 2,
+          height: Responsive.isDesktop(context)
+              ? kDefaultPadding * 2
+              : kDefaultPadding,
         ),
         Container(
           width: double.infinity,
@@ -81,11 +84,15 @@ class AppFAQsSection extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: kDefaultPadding * 2,
+          height: Responsive.isDesktop(context)
+              ? kDefaultPadding * 2
+              : kDefaultPadding,
         ),
         Divider(),
         SizedBox(
-          height: kDefaultPadding * 2,
+          height: Responsive.isDesktop(context)
+              ? kDefaultPadding * 2
+              : kDefaultPadding,
         ),
       ],
     );

@@ -19,6 +19,15 @@ class AppPricingPlans extends StatefulWidget {
 class _AppPricingPlansState extends State<AppPricingPlans> {
   @override
   Widget build(BuildContext context) {
+    return Responsive.isMobile(context)
+        ? SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: appPricingChildRow(context),
+          )
+        : appPricingChildRow(context);
+  }
+
+  Widget appPricingChildRow(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,

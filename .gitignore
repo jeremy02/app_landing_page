@@ -7,6 +7,7 @@
 .atom/
 .buildlog/
 .history
+
 .svn/
 
 # IntelliJ related
@@ -14,6 +15,7 @@
 *.ipr
 *.iws
 .idea/
+*.dart_tool/
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
@@ -30,6 +32,17 @@
 .pub-cache/
 .pub/
 /build/
+*./build/
+
+# All in .dart_tool
+!.dart_tool/
+.dart_tool/*
+# All in build
+!build/
+build/*
+# All in build
+!windows/
+windows/*
 
 # Web related
 lib/generated_plugin_registrant.dart
@@ -39,3 +52,6 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+# Exceptions to above rules.
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages

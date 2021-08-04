@@ -1,5 +1,6 @@
 import 'package:app_landing_page/components/section_caption.dart';
 import 'package:app_landing_page/components/section_title.dart';
+import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -29,7 +30,7 @@ class _AppPricingSectionState extends State<AppPricingSection> {
       children: [
         Container(
           margin: EdgeInsets.symmetric(
-            vertical: kDefaultPadding * 2,
+            vertical: Responsive.isDesktop(context) ? kDefaultPadding : 0,
           ),
           padding: EdgeInsets.all(
             kDefaultPadding,
@@ -64,7 +65,9 @@ class _AppPricingSectionState extends State<AppPricingSection> {
               SizedBox(
                 height: kDefaultPadding,
               ),
-              AppPricingPlans(monthlyActive: monthlyActive),
+              AppPricingPlans(
+                monthlyActive: monthlyActive,
+              ),
               SizedBox(
                 height: kDefaultPadding,
               ),
