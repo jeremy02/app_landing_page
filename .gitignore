@@ -38,8 +38,8 @@
 !.dart_tool/
 .dart_tool/*
 # All in build
-!build/
-build/*
+!/build/
+/build/*
 # All in build
 !windows/
 windows/*
