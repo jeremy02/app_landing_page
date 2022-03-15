@@ -118,6 +118,15 @@ captures/
 .externalNativeBuild
 .cxx/
 
+#Ignore Android Folders
+./android/.gradle*
+./android/.gradle/*
+./android/.gradle
+./android/gradlew
+./android/gradlew.bat
+
+#
+
 # Google Services (e.g. APIs or Firebase)
 # google-services.json
 
