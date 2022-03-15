@@ -21,80 +21,82 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       key: _controller.scaffoldkey,
-      body: Responsive(
-        mobile: SingleChildScrollView(
-          child: Column(
-            children: [
-              TopSection(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              // SizedBox(height: kDefaultPadding * 2),
-              TrustedCompaniesSection(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              AppFeaturesSection(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              AppRewardsSection(),
-              AppProductFeaturesSection(),
-              AppBuildFeaturesSection(),
-              AppPricingSection(),
-              AppClientsSection(),
-              AppFAQsSection(),
-            ],
+      body: SafeArea(
+        child: Responsive(
+          mobile: SingleChildScrollView(
+            child: Column(
+              children: [
+                TopSection(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                // SizedBox(height: kDefaultPadding * 2),
+                TrustedCompaniesSection(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                AppFeaturesSection(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                AppRewardsSection(),
+                AppProductFeaturesSection(),
+                AppBuildFeaturesSection(),
+                AppPricingSection(),
+                AppClientsSection(),
+                AppFAQsSection(),
+              ],
+            ),
           ),
-        ),
-        tablet: SingleChildScrollView(
-          child: Column(
-            children: [
-              TopSection(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              // SizedBox(height: kDefaultPadding * 2),
-              TrustedCompaniesSection(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              AppFeaturesSection(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              AppRewardsSection(),
-              AppProductFeaturesSection(),
-              AppBuildFeaturesSection(),
-              AppPricingSection(),
-              AppClientsSection(),
-              AppFAQsSection(),
-            ],
+          tablet: SingleChildScrollView(
+            child: Column(
+              children: [
+                TopSection(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                // SizedBox(height: kDefaultPadding * 2),
+                TrustedCompaniesSection(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                AppFeaturesSection(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                AppRewardsSection(),
+                AppProductFeaturesSection(),
+                AppBuildFeaturesSection(),
+                AppPricingSection(),
+                AppClientsSection(),
+                AppFAQsSection(),
+              ],
+            ),
           ),
-        ),
-        desktop: SingleChildScrollView(
-          child: Column(
-            children: [
-              TopSection(),
-              SizedBox(
-                height: kDefaultPadding * 2,
-              ),
-              // SizedBox(height: kDefaultPadding * 2),
-              TrustedCompaniesSection(),
-              SizedBox(
-                height: kDefaultPadding * 2,
-              ),
-              AppFeaturesSection(),
-              SizedBox(
-                height: kDefaultPadding * 2,
-              ),
-              AppRewardsSection(),
-              AppProductFeaturesSection(),
-              AppBuildFeaturesSection(),
-              AppPricingSection(),
-              AppClientsSection(),
-              AppFAQsSection(),
-            ],
+          desktop: SingleChildScrollView(
+            child: Column(
+              children: [
+                TopSection(),
+                SizedBox(
+                  height: kDefaultPadding * 2,
+                ),
+                // SizedBox(height: kDefaultPadding * 2),
+                TrustedCompaniesSection(),
+                SizedBox(
+                  height: kDefaultPadding * 2,
+                ),
+                AppFeaturesSection(),
+                SizedBox(
+                  height: kDefaultPadding * 2,
+                ),
+                AppRewardsSection(),
+                AppProductFeaturesSection(),
+                AppBuildFeaturesSection(),
+                AppPricingSection(),
+                AppClientsSection(),
+                AppFAQsSection(),
+              ],
+            ),
           ),
         ),
       ),

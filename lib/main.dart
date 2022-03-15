@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:app_landing_page/home_screen.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'constants.dart';
 
 void main() {
+  // solve the status bar show as transparent
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    // Status bar brightness (optional)
+    statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
+    statusBarBrightness: Brightness.light, // For iOS (dark icons)
+  ));
+
   runApp(MyApp());
 }
 

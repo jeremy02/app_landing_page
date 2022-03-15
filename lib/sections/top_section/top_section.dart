@@ -18,7 +18,10 @@ class TopSection extends StatelessWidget {
         color: Colors.transparent,
       ),
       child: Padding(
-        padding: EdgeInsets.all(
+        padding: EdgeInsets.fromLTRB(
+          kDefaultPadding,
+          Responsive.isMobile(context) ? 0: kDefaultPadding, // top padding for mobile to be Zero
+          kDefaultPadding,
           kDefaultPadding,
         ),
         child: Stack(
