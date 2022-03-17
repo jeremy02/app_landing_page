@@ -3,11 +3,13 @@ import 'package:app_landing_page/sections/top_section/components/web_menu.dart';
 import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/snackbar/snack.dart';
 
 import '../../../constants.dart';
+import '../../../controllers/MenuController.dart';
 
 class CustomAppBar extends StatelessWidget {
+  final MenuController _controller = Get.put(MenuController());
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,19 +22,9 @@ class CustomAppBar extends StatelessWidget {
         children: [
           if (!Responsive.isDesktop(context))
             IconButton(
-              padding: EdgeInsets.only(
-                right: kDefaultPadding / 4
-              ),
+              padding: EdgeInsets.only(right: kDefaultPadding / 4),
               onPressed: () {
-                Get.snackbar(
-                  "DEV",
-                  "Under Dev",
-                  icon: Icon(
-                      Icons.accessibility_new,
-                      color: kPrimaryColor,
-                  ),
-                  snackPosition: SnackPosition.BOTTOM,
-                );
+                _controller.openOrCloseDrawer();
               },
               icon: Icon(
                 Icons.menu,

@@ -12,6 +12,7 @@ import 'package:app_landing_page/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'components/side_menu.dart';
 import 'controllers/MenuController.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,6 +22,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       key: _controller.scaffoldkey,
+      drawer: SideMenu(),
       body: SafeArea(
         child: Responsive(
           mobile: SingleChildScrollView(

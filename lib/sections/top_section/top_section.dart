@@ -20,7 +20,9 @@ class TopSection extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.fromLTRB(
           kDefaultPadding,
-          Responsive.isMobile(context) ? 0: kDefaultPadding, // top padding for mobile to be Zero
+          Responsive.isMobile(context)
+              ? 0
+              : kDefaultPadding, // top padding for mobile to be Zero
           kDefaultPadding,
           kDefaultPadding,
         ),
@@ -48,7 +50,9 @@ class TopSection extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage("assets/images/top_background_bg.png"),
+            image: AssetImage(
+              "assets/images/top_background_bg.png",
+            ),
           ),
         ),
       ),
