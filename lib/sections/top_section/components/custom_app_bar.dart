@@ -29,7 +29,7 @@ class CustomAppBar extends StatelessWidget {
                   "Under Dev",
                   icon: Icon(
                       Icons.accessibility_new,
-                      color: Colors.white,
+                      color: kPrimaryColor,
                   ),
                   snackPosition: SnackPosition.BOTTOM,
                 );
