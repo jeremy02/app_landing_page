@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(
-        Responsive.isMobile(context) ? 0 : 20,
+        Responsive.isMobile(context) ? 0 : kDefaultPadding,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,7 +22,9 @@ class CustomAppBar extends StatelessWidget {
         children: [
           if (!Responsive.isDesktop(context))
             IconButton(
-              padding: EdgeInsets.only(right: kDefaultPadding / 4),
+              padding: EdgeInsets.only(
+                right: kDefaultPadding / 4,
+              ),
               onPressed: () {
                 _controller.openOrCloseDrawer();
               },

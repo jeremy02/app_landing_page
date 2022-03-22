@@ -24,7 +24,9 @@ class DefaultButton extends StatelessWidget {
         style: TextButton.styleFrom(
           backgroundColor: kPrimaryColor3,
           padding: EdgeInsets.symmetric(
-            horizontal: kDefaultPadding * 2,
+            horizontal: Responsive.isDesktop(context)
+                ? kDefaultPadding * 2
+                : kDefaultPadding * 0.8,
             vertical:
                 kDefaultPadding / (Responsive.isDesktop(context) ? 1.2 : 1.2),
           ),

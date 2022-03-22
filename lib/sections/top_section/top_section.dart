@@ -14,24 +14,23 @@ class TopSection extends StatelessWidget {
       alignment: Alignment.center,
       height: topSectionSize.height,
       width: double.infinity,
+      constraints: BoxConstraints(
+        minHeight: Responsive.isDesktop(context) ? 600 : 450,
+      ),
+      margin: EdgeInsets.symmetric(
+        vertical: kDefaultPadding,
+        horizontal: Responsive.isMobile(context)
+            ? kDefaultPadding * 0.5
+            : kDefaultPadding,
+      ),
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(
-          kDefaultPadding,
-          Responsive.isMobile(context)
-              ? 0
-              : kDefaultPadding, // top padding for mobile to be Zero
-          kDefaultPadding,
-          kDefaultPadding,
-        ),
-        child: Stack(
-          children: [
-            topSectionBackground(topSectionSize.height),
-            topSectionBody(context),
-          ],
-        ),
+      child: Stack(
+        children: [
+          topSectionBackground(topSectionSize.height),
+          topSectionBody(context),
+        ],
       ),
     );
   }
